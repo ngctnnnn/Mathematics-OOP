@@ -1,23 +1,20 @@
 package fraction;
+import special_number.*;
 import java.util.*;
 
-public class Fraction {
-    private int numerator;
-    private int demorator;
-    
+public class Fraction extends SpecialNumber {
+    //   base
+    // --------
+    // addition
     public Fraction() {
-        numerator = 0;
-        demorator = 1;
+        base = 0;
+        addition = 1;
     }
 
-    public void set() {
-        Scanner sc = new Scanner(System.in);
-        numerator = sc.nextInt();
-        demorator = sc.nextInt();
-    }
+    //public void set();
 
     public void get() {
-        System.out.println(numerator + "/" + demorator);
+        System.out.println(base + "/" + addition);
     }
 
     int __gcd(int a, int b) {
@@ -28,35 +25,35 @@ public class Fraction {
     }
 
     public Fraction simplify() {
-        int commonDivisor = __gcd(numerator, demorator);
-        numerator /= commonDivisor;
-        demorator /= commonDivisor;
+        int commonDivisor = __gcd(base, addition);
+        base /= commonDivisor;
+        addition /= commonDivisor;
         return this;
     }
 
     public Fraction plus(Fraction other) {
-        int commonMultiply = other.demorator * demorator;
-        numerator = numerator * other.demorator + other.numerator * demorator;
-        demorator = commonMultiply;
+        int commonMultiply = other.addition * addition;
+        base = base * other.addition + other.base * addition;
+        addition = commonMultiply;
         return this.simplify();
     }
 
     public Fraction minus(Fraction other) {
-        int commonMultiply = other.demorator * demorator;
-        numerator = numerator * other.demorator - other.numerator * demorator;
-        demorator = commonMultiply;
+        int commonMultiply = other.addition * addition;
+        base = base * other.addition - other.base * addition;
+        addition = commonMultiply;
         return this.simplify();
     }
 
     public Fraction multiply(Fraction other) {
-        numerator *= other.numerator;
-        demorator *= other.demorator;
+        base *= other.base;
+        addition *= other.addition;
         return this.simplify();
     }
 
     public Fraction divide(Fraction other) {
-        numerator *= other.demorator;
-        demorator *= other.numerator;
+        base *= other.addition;
+        addition *= other.base;
         return this.simplify();
     }
 }
