@@ -1,2 +1,2 @@
 # OOP
-Practice OOP in my freetime
+Revise some problems in mathematics via the use of OOP
