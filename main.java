@@ -2,6 +2,7 @@ import special_number.*;
 import fraction.*;
 import complex.*;
 import prime.*;
+import square_number.*;
 
 public class main{
     public static void main(String[] args){
@@ -19,7 +20,7 @@ public class main{
         f3 = f1.divide(f3);
         f3.get();
 
-        // //Complex
+        // // //Complex
         Complex c1 = new Complex();
         Complex c2 = new Complex();
         c1.set(); c2.set();
@@ -27,8 +28,12 @@ public class main{
         (c1.minus(c2)).get();
         (c1.multiply(c2)).get();
 
-        //Prime
+        // //Prime
         Prime p1 = new Prime();
         p1.set(); p1.get();
+
+        //Square number
+        SquareNumber sq1 = new SquareNumber();
+        sq1.set(); sq1.get();
     }
 }
