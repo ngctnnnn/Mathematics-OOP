@@ -20,6 +20,17 @@ public class Prime extends SpecialNumber {
         return true;
     }
 
+    public void primeSieve(int []sieve) {
+        sieve[0] = 0;
+        sieve[1] = 0;
+        for (int i = 2; i <= base; i += 1)
+            sieve[i] = 1;
+        for (int i = 2; i*i <= base; i += 1)
+            if (sieve[i] == 1)
+                for (int j = i*i; j <= base; j += i)
+                    sieve[j] = 0;
+    }
+
     //Input one number -> give the nearest prime
     public void set() {
         Scanner sc = new Scanner(System.in);

@@ -20,7 +20,7 @@ public class main{
         f3 = f1.divide(f3);
         f3.get();
 
-        // // //Complex
+        //Complex
         Complex c1 = new Complex();
         Complex c2 = new Complex();
         c1.set(); c2.set();
