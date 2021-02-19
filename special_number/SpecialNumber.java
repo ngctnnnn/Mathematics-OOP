@@ -21,15 +21,19 @@ public class SpecialNumber {
     }
 
     public SpecialNumber plus(SpecialNumber other){
+        base += other.base;
         return this;
     }
     public SpecialNumber minus(SpecialNumber other){
+        base -= other.base;
         return this;
     }
     public SpecialNumber multiply(SpecialNumber other){
+        base *= other.base;
         return this;
     }
     public SpecialNumber divide(SpecialNumber other){
+        base /= other.base;
         return this;
     }
 }
