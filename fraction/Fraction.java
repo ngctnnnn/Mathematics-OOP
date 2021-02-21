@@ -6,6 +6,8 @@ public class Fraction extends SpecialNumber {
     //   base
     // --------
     // addition
+    private int addition = 0;
+    
     public Fraction() {
         base = 0;
         addition = 1;

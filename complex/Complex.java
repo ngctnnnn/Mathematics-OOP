@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Complex extends SpecialNumber {
     //base + (addition)i
+    private int addition = 0;
 
     public Complex() {
         base = 0;

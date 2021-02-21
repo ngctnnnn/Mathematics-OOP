@@ -3,17 +3,14 @@ import java.util.*;
 
 public class SpecialNumber {
     protected int base;
-    protected int addition;
 
     public SpecialNumber() {
         base = 0;
-        addition = 0;
     }
 
     public void set() {
         Scanner sc = new Scanner(System.in);
         base = sc.nextInt();
-        addition = sc.nextInt();
     }
 
     public void get() {
